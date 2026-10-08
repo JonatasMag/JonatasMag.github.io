@@ -133,7 +133,8 @@
             </div>
             <ul class="stack" aria-label="Ferramentas usadas"><li>Python</li><li>pandas</li><li>SQL</li><li>Power BI</li><li>DAX</li></ul>
             <div class="actions">
-              <a class="btn btn-ink" href="https://github.com/JonatasMag/analise-ecommerce-olist" target="_blank" rel="noopener">Ver código e análise</a>
+              <a class="btn btn-signal" data-link="powerbi" href="#" target="_blank" rel="noopener">Explorar o dashboard</a>
+              <a class="btn btn-line" href="https://github.com/JonatasMag/analise-ecommerce-olist" target="_blank" rel="noopener">Ver o código</a>
             </div>
           </div>
           <div class="viewer">
@@ -146,6 +147,7 @@
               <span class="zoom">Ampliar</span>
             </button>
             <p class="caption" data-olist="legenda" aria-live="polite"></p>
+            <p class="live-hint" data-live-hint hidden>Estas são imagens. Para filtrar por estado, mês e categoria, use <a data-link="powerbi" href="#" target="_blank" rel="noopener">o dashboard publicado no Power BI</a>.</p>
           </div>
         </div>
       </div>
@@ -247,6 +249,15 @@
       <a href="#inicio">Voltar ao topo</a>
     </div>
   </footer>
+
+  <dialog class="live" id="aovivo" aria-labelledby="aovivo-titulo">
+    <div class="live-bar">
+      <h2 id="aovivo-titulo">Dashboard Olist no Power BI</h2>
+      <a data-link="powerbi" href="#" target="_blank" rel="noopener">Abrir em nova aba</a>
+      <button class="live-close" type="button">Fechar</button>
+    </div>
+    <div class="live-frame"><iframe title="Dashboard Olist no Power BI" allowfullscreen></iframe></div>
+  </dialog>
 
   <dialog class="lightbox" id="lightbox" aria-label="Imagem ampliada do dashboard">
     <img src="" alt="" />

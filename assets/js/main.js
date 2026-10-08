@@ -124,6 +124,30 @@
   /* ---------- Links e contatos ---------- */
   var githubUrl = C.githubUser ? "https://github.com/" + C.githubUser : "";
   $$('[data-link="cv"]').forEach(function (a) { if (C.cv) a.href = C.cv; else a.remove(); });
+
+  // Dashboard Power BI: abre numa janela dentro do site (no celular, abre em nova aba)
+  var aoVivo = $("#aovivo");
+  if (C.powerbi) {
+    $$('[data-link="powerbi"]').forEach(function (a) { a.href = C.powerbi; });
+    var dica = $("[data-live-hint]"); if (dica) dica.hidden = false;
+    if (aoVivo && typeof aoVivo.showModal === "function") {
+      var quadro = $("iframe", aoVivo);
+      $$('[data-link="powerbi"]').forEach(function (a) {
+        if (aoVivo.contains(a)) return;
+        a.addEventListener("click", function (e) {
+          if (window.innerWidth < 760) return;
+          e.preventDefault();
+          if (!quadro.getAttribute("src")) quadro.src = C.powerbi;
+          aoVivo.showModal();
+        });
+      });
+      $(".live-close", aoVivo).addEventListener("click", function () { aoVivo.close(); });
+      aoVivo.addEventListener("click", function (e) { if (e.target === aoVivo) aoVivo.close(); });
+    }
+  } else {
+    $$('[data-link="powerbi"]').forEach(function (a) { a.remove(); });
+    var semDica = $("[data-live-hint]"); if (semDica) semDica.remove();
+  }
   var contatos = {
     email: C.email && { href: "mailto:" + C.email, text: C.email },
     whatsapp: C.whatsapp && { href: C.whatsapp, text: C.phoneLabel || "WhatsApp" },
