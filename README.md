@@ -1,50 +1,48 @@
-# Portfólio — Jônatas Magalhães
+# Portfólio — Jonatas Magalhães
 
-Site estático (HTML, CSS e JavaScript puros), sem build. Ele roda direto no **GitHub Pages**.
+Site estático (HTML, CSS e JavaScript puros), sem build. Roda direto no **GitHub Pages**: https://jonatasmag.github.io
 
-A seção **Projetos** lê seus repositórios públicos do GitHub toda vez que alguém abre a página. Por isso, cada repositório novo que você criar aparece no portfólio sozinho.
+A seção **Outros projetos** lê os repositórios públicos do GitHub toda vez que alguém abre a página. Cada repositório novo aparece no portfólio sozinho.
 
-## Como publicar (uma vez só)
+## Onde editar
 
-1. Entre no GitHub e crie um repositório **público** com o nome exato **`JonatasMag.github.io`**.
-2. Na página do repositório, clique em **"uploading an existing file"**.
-3. Arraste para lá **todo o conteúdo desta pasta**: `index.html`, a pasta `assets`, o arquivo `.nojekyll` e este README. Depois clique em **Commit changes**.
-4. Vá em **Settings → Pages** e confira se a fonte está como *Deploy from a branch → main → / (root)*.
-5. Em 1 a 2 minutos o site estará no ar em **https://jonatasmag.github.io**
+São só dois arquivos. Para editar pelo GitHub: abra o arquivo, clique no lápis ✏️, altere e clique em **Commit changes**. O site se atualiza em cerca de 1 minuto.
 
-## O que editar
+### `assets/js/dados.js` (os textos do site)
 
-Tudo fica em **`assets/js/config.js`**:
+| Bloco | O que aparece no site |
+|---|---|
+| `resultados` | O painel escuro do topo. Cada item vira um botão. `antes` e `depois` são os valores das barras; `destaque` é o número grande |
+| `olist` | As abas do dashboard na seção Projeto Olist (imagem e legenda) |
+| `trajetoria` | A linha do tempo. Cada cargo abre com um clique e mostra os feitos |
+| `competencias` | As abas de competências. Cada item é `["Competência", "onde foi usada"]` |
+
+Cuidado com as vírgulas e aspas: cada item termina com vírgula, e todo texto fica entre aspas.
+
+### `assets/js/config.js` (links e contatos)
 
 | Campo | Para que serve |
 |---|---|
-| `linkedin` | Cole o endereço do seu perfil para os ícones do LinkedIn aparecerem |
-| `instagram` | Opcional |
-| `cv` | Coloque o PDF em `assets/` com o nome `curriculo-jonatas-magalhaes.pdf` e preencha `"assets/curriculo-jonatas-magalhaes.pdf"` |
-| `hideRepos` | Repositórios que não devem aparecer |
-| `featuredRepos` | Repositórios que aparecem primeiro, com selo "Destaque" |
+| `email`, `phone`, `whatsapp`, `linkedin` | Contatos. Deixe `""` para esconder um deles |
+| `cv` | Caminho do currículo em PDF |
+| `hideRepos` | Repositórios que não aparecem em "Outros projetos" |
 | `repoTitles` | Títulos com acento, ex.: `"oracao-e-palavra": "Oração e Palavra"` |
+| `cloudflareAnalyticsToken` | Opcional, para contar visitas |
 
-Para editar direto no GitHub, abra o arquivo, clique no lápis ✏️, altere e clique em **Commit changes**. O site se atualiza em cerca de 1 minuto.
+## Trocar o currículo
+
+Envie o novo PDF para `assets/` com o mesmo nome, `curriculo-jonatas-magalhaes.pdf`, substituindo o antigo.
 
 ## Controlando os projetos pelo próprio GitHub
 
-Você não precisa mexer no código para organizar os projetos. Basta usar a engrenagem ⚙️ ao lado de **About**, na página de cada repositório:
+Na página de cada repositório, clique na engrenagem ⚙️ ao lado de **About**:
 
-- **Description:** vira o texto do card. Escreva uma frase clara sobre o problema que o projeto resolve.
-- **Website:** cria o botão "Ver no ar". Serve para o link de um dashboard publicado, de um site etc.
-- **Topics:** viram etiquetas no card (ex.: `power-bi`, `sql`, `python`). Dois tópicos especiais:
-  - `destaque` coloca o projeto no topo, com selo;
-  - `ocultar` esconde o projeto do portfólio.
+- **Description:** vira o texto do card.
+- **Website:** cria o botão "Ver no ar".
+- **Topics:** `destaque` coloca o projeto no topo; `ocultar` esconde o projeto do portfólio.
 
-Forks e repositórios arquivados são ignorados automaticamente.
-
-## LinkedIn ↔ GitHub
-
-Para ligar os dois lados:
-- **No LinkedIn:** em *Perfil → Adicionar seção → Recomendado → Website*, adicione `https://jonatasmag.github.io` como "Portfólio". Em *Projetos*, adicione os principais repositórios com link.
-- **No GitHub:** em *Settings → Public profile*, coloque o portfólio em **Website** e o LinkedIn em **Social accounts**.
+Forks e repositórios arquivados são ignorados automaticamente. O botão de filtro por linguagem aparece quando há projetos em mais de uma linguagem.
 
 ## Testar no computador
 
-Basta abrir o `index.html` no navegador com dois cliques. Se os projetos não carregarem assim, rode `python -m http.server` dentro da pasta e abra http://localhost:8000.
+Na pasta do site, rode `python -m http.server` e abra http://localhost:8000.
