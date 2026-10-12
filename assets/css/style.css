@@ -197,6 +197,7 @@ details[open] .t-toggle { transform: rotate(180deg); background: var(--signal); 
 .skills span { font-size: 16px; color: #3d5368; }
 
 /* Formação */
+.ids { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
 .degrees { display: grid; }
 .degrees li { display: grid; grid-template-columns: 72px 1fr; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--fog); }
 .degrees li:first-child { padding-top: 0; }
