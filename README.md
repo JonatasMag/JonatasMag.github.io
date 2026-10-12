@@ -24,7 +24,7 @@ Cuidado com as vírgulas e aspas: cada item termina com vírgula, e todo texto f
 | Campo | Para que serve |
 |---|---|
 | `email`, `phone`, `whatsapp`, `linkedin` | Contatos. Deixe `""` para esconder um deles |
-| `cv` | Caminho do currículo em PDF |
+| `cv` | Caminho do currículo em PDF. Hoje está `""`, então o botão "Baixar currículo" não aparece. Para voltar, use `"assets/curriculo-jonatas-magalhaes.pdf"` |
 | `powerbi` | Link público do dashboard Olist. Deixe `""` para esconder o botão "Explorar o dashboard" |
 | `hideRepos` | Repositórios que não aparecem em "Outros projetos" |
 | `repoTitles` | Títulos com acento, ex.: `"oracao-e-palavra": "Oração e Palavra"` |

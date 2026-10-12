@@ -12,7 +12,8 @@ window.PORTFOLIO_CONFIG = {
   whatsapp: "https://wa.me/5547988499129",
   linkedin: "https://www.linkedin.com/in/jonatasmag/",
 
-  cv: "assets/curriculo-jonatas-magalhaes.pdf",
+  // Currículo em PDF para baixar. Deixe "" para esconder o botão.
+  cv: "",
 
   // Link público do dashboard Olist (Power BI > Arquivo > Inserir relatório > Publicar na Web).
   // Deixe "" para esconder o botão "Explorar o dashboard".
