@@ -21,7 +21,7 @@ window.PORTFOLIO_CONFIG = {
 
   // Repositórios que NÃO aparecem em "Outros projetos" (o Olist já tem seção própria).
   // Também dá para esconder um repositório pelo GitHub, com o tópico "ocultar".
-  hideRepos: ["JonatasMag.github.io", "JonatasMag", "analise-ecommerce-olist"],
+  hideRepos: ["JonatasMag.github.io", "JonatasMag", "analise-ecommerce-olist", "painel-consultoria"],
 
   // Títulos com acento para os repositórios
   repoTitles: {
