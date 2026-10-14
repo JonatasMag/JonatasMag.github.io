@@ -19,9 +19,9 @@ window.PORTFOLIO_CONFIG = {
   // Deixe "" para esconder o botão "Explorar o dashboard".
   powerbi: "https://app.powerbi.com/view?r=eyJrIjoiZGZlOGE4NjMtM2UwMi00ODZmLTg2MjItMDk4ZmM1Y2VkY2FlIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9",
 
-  // Repositórios que NÃO aparecem em "Outros projetos" (o Olist já tem seção própria).
+  // Repositórios que NÃO aparecem em "Outros projetos" (Olist, Varejo e Painel já têm seção própria).
   // Também dá para esconder um repositório pelo GitHub, com o tópico "ocultar".
-  hideRepos: ["JonatasMag.github.io", "JonatasMag", "analise-ecommerce-olist", "painel-consultoria"],
+  hideRepos: ["JonatasMag.github.io", "JonatasMag", "analise-ecommerce-olist", "analise-varejo-clientes", "painel-consultoria"],
 
   // Títulos com acento para os repositórios
   repoTitles: {

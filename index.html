@@ -54,6 +54,7 @@
       <nav class="nav" aria-label="Seções">
         <a href="#resultados">Resultados</a>
         <a href="#olist">Projeto Olist</a>
+        <a href="#varejo">Varejo</a>
         <a href="#painel">Painel</a>
         <a href="#trajetoria">Trajetória</a>
         <a href="#competencias">Competências</a>
@@ -64,6 +65,7 @@
     <nav class="menu-mobile" id="menu-mobile" aria-label="Seções" hidden>
       <a href="#resultados">Resultados</a>
       <a href="#olist">Projeto Olist</a>
+        <a href="#varejo">Varejo</a>
       <a href="#painel">Painel</a>
       <a href="#trajetoria">Trajetória</a>
       <a href="#competencias">Competências</a>
@@ -153,8 +155,45 @@
       </div>
     </section>
 
+    <!-- Estudo de caso: varejo -->
+    <section class="section section-alt" id="varejo">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Estudo de caso: o que uma base de varejo realmente diz</h2>
+          <p>830 mil itens de supermercado, 1.000 clientes, de 2019 a 2022. Revisei uma análise feita no curso e testei cada conclusão antes de transformá-la em recomendação.</p>
+        </div>
+        <div class="case-grid">
+          <div class="case-story">
+            <div class="step"><h3>O problema</h3><p>Saber se o perfil do cliente (classe, gênero, filhos) muda o que ele compra, para orientar campanhas e o mix de produtos.</p></div>
+            <div class="step"><h3>O que fiz</h3><p>Refiz o tratamento, montei um modelo estrela, escrevi oito consultas SQL e rodei 12 testes estatísticos com tamanho de efeito.</p></div>
+            <div class="step"><h3>O que os dados mostraram</h3>
+              <ul class="findings">
+                <li><b>11,6%</b> do volume tinha sido apagado como duplicata, mas era venda</li>
+                <li><b>12</b> testes estatísticos e nenhuma diferença relevante entre perfis</li>
+                <li><b>0,90</b> de correlação entre as vendas do mês e os dias registrados na base</li>
+              </ul>
+            </div>
+            <ul class="stack" aria-label="Ferramentas usadas"><li>Python</li><li>pandas</li><li>SQL</li><li>SciPy</li><li>Estatística</li></ul>
+            <div class="actions">
+              <a class="btn btn-signal" href="https://github.com/JonatasMag/analise-varejo-clientes#readme" target="_blank" rel="noopener">Ler o estudo</a>
+              <a class="btn btn-line" href="https://github.com/JonatasMag/analise-varejo-clientes/blob/main/notebooks/analise_varejo.ipynb" target="_blank" rel="noopener">Ver o notebook</a>
+            </div>
+          </div>
+          <div class="viewer">
+            <a class="shot-link" href="https://github.com/JonatasMag/analise-varejo-clientes#readme" target="_blank" rel="noopener" aria-label="Abrir o estudo de caso de varejo">
+              <picture>
+                <source type="image/webp" srcset="assets/img/varejo-mix-720.webp 720w, assets/img/varejo-mix.webp 1200w" sizes="(max-width: 900px) 92vw, 640px" />
+                <img src="assets/img/varejo-mix.jpg" alt="Gráfico de barras: a participação de alimentos, higiene, limpeza e bebidas é a mesma nas classes A, B e C, nos dois gêneros e com ou sem filhos" width="1200" height="667" loading="lazy" />
+              </picture>
+            </a>
+            <p class="caption">Classe, gênero e filhos não mudam a cesta. A recomendação foi não criar campanha por perfil com esta base e passar a registrar preço, quantidade e todos os dias de venda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Painel de Consultoria -->
-    <section class="section section-alt" id="painel">
+    <section class="section" id="painel">
       <div class="wrap">
         <div class="section-head">
           <h2>Painel de Consultoria: do diagnóstico ao treinamento</h2>
@@ -190,7 +229,7 @@
     </section>
 
     <!-- Outros projetos (GitHub automático) -->
-    <section class="section" id="projetos">
+    <section class="section section-alt" id="projetos">
       <div class="wrap">
         <div class="section-head row">
           <h2>Outros projetos no GitHub</h2>
@@ -203,7 +242,7 @@
     </section>
 
     <!-- Trajetória -->
-    <section class="section section-alt" id="trajetoria">
+    <section class="section" id="trajetoria">
       <div class="wrap two-col">
         <div class="section-head sticky">
           <h2>Trajetória</h2>
@@ -214,7 +253,7 @@
     </section>
 
     <!-- Competências -->
-    <section class="section" id="competencias">
+    <section class="section section-alt" id="competencias">
       <div class="wrap">
         <div class="section-head">
           <h2>Competências e onde as usei</h2>
@@ -225,7 +264,7 @@
     </section>
 
     <!-- Formação -->
-    <section class="section section-alt" id="formacao">
+    <section class="section" id="formacao">
       <div class="wrap two-col">
         <div class="section-head">
           <h2>Formação</h2>
