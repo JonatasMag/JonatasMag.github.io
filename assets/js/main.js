@@ -204,6 +204,18 @@
   }
   $("#ano").textContent = new Date().getFullYear();
 
+  /* ---------- Faixa de clientes (lista em config.js) ---------- */
+  var listaCli = $("#clientes-lista");
+  if (listaCli) {
+    var cls = C.clientes || [];
+    listaCli.innerHTML = cls.map(function (c) {
+      var logo = '<span class="cli-logo"><img src="' + esc(c.logo) + '" alt="Logo ' + esc(c.nome) + '" loading="lazy" /></span>';
+      var info = '<span class="cli-info"><b>' + esc(c.nome) + "</b>" + (c.segmento ? '<small>' + esc(c.segmento) + "</small>" : "") + (c.entrega ? "<span>" + esc(c.entrega) + "</span>" : "") + "</span>";
+      return "<li>" + (c.site ? '<a class="cli-card" href="' + esc(c.site) + '" target="_blank" rel="noopener">' + logo + info + '<span class="cli-ver">Visitar o site</span></a>' : '<div class="cli-card">' + logo + info + "</div>") + "</li>";
+    }).join("") +
+      '<li><a class="cli-card cli-vaga" href="#contato"><span class="cli-logo cli-logo-vaga" aria-hidden="true">+</span><span class="cli-info"><b>Sua empresa aqui</b><span>Vamos organizar a operação da sua empresa juntos.</span></span><span class="cli-ver">Falar comigo</span></a></li>';
+  }
+
   /* ---------- Métricas de visita (opcional) ---------- */
   if (C.cloudflareAnalyticsToken) {
     var cf = document.createElement("script");
