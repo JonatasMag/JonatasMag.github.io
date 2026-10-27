@@ -287,3 +287,60 @@ details[open] .t-toggle { transform: rotate(180deg); background: var(--signal); 
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* =============================================================
+ * Meu Painel em destaque, serviços e faixa de anúncio
+ * ============================================================= */
+.anuncio { background: var(--ink); color: #d6e1ea; font-size: 15px; }
+.anuncio-in { display: flex; align-items: center; justify-content: center; gap: 18px; min-height: 44px; flex-wrap: wrap; padding-top: 6px; padding-bottom: 6px; text-align: center; }
+.anuncio p { margin: 0; }
+.anuncio b { color: var(--signal); font-weight: 600; }
+.anuncio a { color: #fff; font-weight: 600; text-underline-offset: 3px; }
+.nav-destaque { color: var(--ink) !important; font-weight: 600; }
+.nav-destaque::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: var(--signal); vertical-align: 2px; }
+.topbar-cta { margin-left: 4px; }
+.btn-ghost { border-color: rgba(255,255,255,.28); color: #fff; background: transparent; }
+.btn-ghost:hover { border-color: #fff; }
+
+.painel-band { background: var(--ink); color: #c9d6e2; padding: 112px 0; position: relative; overflow: hidden; }
+.painel-band::before { content: ""; position: absolute; left: -160px; top: -160px; width: 420px; height: 420px; border-radius: 50%; border: 64px solid rgba(232,163,61,.06); pointer-events: none; }
+.painel-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.02fr); gap: 64px; align-items: start; position: relative; }
+.painel-selo { display: inline-block; margin: 0 0 20px; padding: 6px 14px; border-radius: 999px; background: rgba(232,163,61,.14); color: var(--signal); font-size: 15px; font-weight: 600; }
+.painel-texto h2 { color: #fff; font-size: clamp(34px, 3.8vw, 52px); line-height: 1.06; letter-spacing: -.03em; }
+.painel-lede { margin-top: 20px; font-size: 19px; color: #c9d6e2; max-width: 34em; }
+.painel-ferr { list-style: none; counter-reset: p; margin: 32px 0 0; padding: 0; }
+.painel-ferr li { counter-increment: p; display: grid; grid-template-columns: 44px 1fr; column-gap: 8px; padding: 14px 0; border-top: 1px solid rgba(255,255,255,.1); }
+.painel-ferr li::before { content: counter(p, decimal-leading-zero); grid-row: span 2; font-family: var(--display); font-weight: 600; color: var(--signal); font-size: 16px; padding-top: 2px; }
+.painel-ferr b { color: #fff; font-weight: 600; font-size: 18px; }
+.painel-ferr span { font-size: 15px; color: #9fb4c8; }
+.painel-texto .actions { margin-top: 32px; }
+.painel-nota { margin-top: 14px; font-size: 14px; color: #8ea3b8; }
+.painel-shot { display: block; border-radius: 18px; overflow: hidden; border: 1px solid rgba(255,255,255,.14); box-shadow: 0 40px 80px -40px rgba(0,0,0,.7); transition: transform .2s var(--ease); }
+.painel-shot:hover { transform: translateY(-3px); }
+.painel-shot img { width: 100%; height: auto; display: block; }
+.painel-dentro { margin-top: 28px; padding: 26px 28px; border-radius: 18px; background: var(--ink-2); }
+.painel-dentro h3 { color: #fff; font-size: 19px; }
+.painel-dentro ul { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px; }
+.painel-dentro li { padding-left: 20px; position: relative; font-size: 16px; color: #c9d6e2; }
+.painel-dentro li::before { content: ""; position: absolute; left: 0; top: .6em; width: 8px; height: 8px; border-radius: 2px; background: var(--signal); }
+.painel-dentro b { color: #fff; font-weight: 600; }
+
+.servicos { list-style: none; counter-reset: s; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 2px solid var(--ink); }
+.servicos li { counter-increment: s; padding: 28px 28px 32px 0; border-bottom: 1px solid var(--fog); }
+.servicos li:not(:nth-child(3n+1)) { padding-left: 28px; border-left: 1px solid var(--fog); }
+.servicos li::before { content: "Etapa " counter(s); display: block; font-size: 14px; font-weight: 600; color: var(--steel); margin-bottom: 10px; }
+.servicos b { display: block; font-family: var(--display); font-size: 24px; font-weight: 600; color: var(--ink); letter-spacing: -.015em; }
+.servicos span { display: block; margin-top: 8px; color: #3d5368; font-size: 16px; }
+.servicos-cta { margin-top: 36px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.servicos-cta p { margin: 0; color: var(--slate); }
+
+@media (max-width: 1100px) {
+  .topbar-cta { display: none; }
+}
+@media (max-width: 900px) {
+  .painel-band { padding: 72px 0; }
+  .painel-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .servicos { grid-template-columns: minmax(0, 1fr); }
+  .servicos li, .servicos li:not(:nth-child(3n+1)) { padding: 22px 0; border-left: 0; }
+  .anuncio { font-size: 14px; }
+}

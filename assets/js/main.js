@@ -200,7 +200,7 @@
         links.forEach(function (l) { l.classList.toggle("active", l.getAttribute("href") === "#" + en.target.id); });
       });
     }, { rootMargin: "-45% 0px -50% 0px" });
-    ["resultados", "olist", "varejo", "painel", "trajetoria", "competencias", "contato"].forEach(function (id) { var el = document.getElementById(id); if (el) obs.observe(el); });
+    ["painel", "servicos", "resultados", "casos", "trajetoria", "contato"].forEach(function (id) { var el = document.getElementById(id); if (el) obs.observe(el); });
   }
   $("#ano").textContent = new Date().getFullYear();
 
