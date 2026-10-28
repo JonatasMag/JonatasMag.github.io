@@ -363,3 +363,8 @@ a.cli-card:hover { border-color: var(--ink); transform: translateY(-2px); box-sh
 .cli-logo-vaga { background: var(--white); border: 1px dashed var(--fog); font-family: var(--display); font-size: 44px; font-weight: 500; color: var(--signal); }
 @media (max-width: 900px) { .clientes-lista { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
 @media (max-width: 600px) { .clientes { padding: 56px 0; } .clientes-lista { grid-template-columns: minmax(0, 1fr); } }
+
+.painel-login { margin-top: 18px; padding: 12px 16px; border-radius: 12px; background: rgba(232,163,61,.12); border: 1px solid rgba(232,163,61,.35); color: #fff; font-size: 16px; max-width: 34em; }
+.painel-login b { color: var(--signal); }
+.hero-login { margin-top: 14px; font-size: 15px; color: var(--slate); }
+.hero-login b { color: var(--ink); }
