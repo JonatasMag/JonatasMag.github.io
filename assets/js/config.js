@@ -22,7 +22,7 @@ window.PORTFOLIO_CONFIG = {
   // Faixa "Clientes e projetos". Para incluir um cliente, copie um bloco, troque os dados
   // e coloque o logo em assets/img/clientes/. Deixe "site" vazio se não houver site.
   clientes: [
-    { nome: "Realiza Consultoria Imobiliária", logo: "assets/img/clientes/realiza.png", segmento: "Imobiliária", entrega: "Site com busca de imóveis e área dos corretores com funil de clientes", site: "https://realiza.pages.dev" },
+    { nome: "Realiza Consultoria Imobiliária", logo: "assets/img/clientes/realiza.png", segmento: "Imobiliária", entrega: "Site com busca de imóveis e área dos corretores com funil de clientes", site: "https://realizaconsultoriaimobiliaria.com/" },
     { nome: "Oração e Palavra", logo: "assets/img/clientes/oracao-e-palavra.png", segmento: "Terceiro setor", entrega: "Site com painel de gestão de pedidos, conteúdos e equipe", site: "https://oracao-e-palavra.chazaq-adm.workers.dev" },
   ],
 
